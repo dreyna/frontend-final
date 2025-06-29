@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body th:with="titulo='Dashboard', encabezado='Panel Principal'"
+          th:replace="~{layout :: layout(titulo=${titulo}, encabezado=${encabezado})}">
+        <div th:fragment="contenido">
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Dashboard</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item active">Dashboard</li>
+                </ol>
+            </div>
+        </div>
+    </body>
+</html>

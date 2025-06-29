@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(titulo, encabezado, usuario)">
+<head th:replace="~{fragments/header :: encabezado(${titulo})}"></head>
+<body class="sb-nav-fixed">
+
+    <div th:replace="~{fragments/nav :: navbar}"></div>
+
+    <div id="layoutSidenav">
+        <div th:replace="~{fragments/layoutSidenav :: sidenav(${usuario})}"></div>
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div th:replace="~{::contenido}"></div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">&copy; Sys Biblioteca 2025</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div th:replace="~{fragments/scripts :: scripts}"></div>
+
+</body>
+</html>

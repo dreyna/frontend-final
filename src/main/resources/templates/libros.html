@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body th:with="titulo='Libros', encabezado='Gestión de Libros'" th:replace="layout :: layout">
+    <div th:fragment="contenido">
+        <div class="container-fluid px-4">
+            <h1 class="mt-4" th:text="${encabezado}">Gestión de Libros</h1>
+            <p>Administración de libros del sistema.</p>
+        </div>
+    </div>
+</body>
+</html>

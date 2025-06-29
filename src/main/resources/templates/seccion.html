@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body th:with="titulo='Dashboard', encabezado='Inicio', usuario='David Reyna'" class="sb-nav-fixed">
+    <div th:replace="~{layout :: layout(titulo=${titulo}, encabezado=${encabezado}, usuario=${usuario})}">
+        <div th:fragment="contenido">
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Secciones</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item active">Secciones</li>
+                </ol>
+            </div>
+            <div class="container">
+                <h3>Colocar el CRUD</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
