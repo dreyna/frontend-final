@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/auth")
 public class OAuthController {
     
-    @PostMapping("/dashboard")
+    @GetMapping("/dashboard")
     public String dashboard(Model model){
         model.addAttribute("titulo", "dashboard");
         return "dashboard";
